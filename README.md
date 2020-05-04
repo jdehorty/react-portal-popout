@@ -1,25 +1,25 @@
 # React Popout Component
 ## This is a fork of the react-popout-component. Microsoft did the 95% of the work, but their repo went stale in 2018.
-[![Build Status](https://api.travis-ci.org/ickerday/react-portal-popout.svg?branch=v1.9.0)](https://travis-ci.org/Microsoft/react-popout-component) [![npm](https://img.shields.io/npm/v/react-portal-popout.svg)](https://www.npmjs.com/package/react-portal-popout)
+[![Build Status](https://api.travis-ci.org/Ickerday/react-popout-component.svg?branch=master)](https://travis-ci.org/Ickerday/react-popout-component) [![npm](https://img.shields.io/npm/v/react-portal-popout.svg)](https://www.npmjs.com/package/react-portal-popout)
 
 This is a React component designed for React 16 with complete Typescript support.
 
 ## Features
 
-1. This is developed along side with the React 16 fix to allow mounting across frames *even for Edge and IE* browsers
+1. This is developed alongside the React 16 fix to allow mounting across frames *even for Edge and IE* browsers
 2. Typescript support for all the options (especially hard to remember window features)
 3. Reflects style-loader injected styles from the main window to the children window
 
 ## Installation
 
 ```sh
-npm install react-popout-component
+npm install react-portal-popout
 ```
 
 or
 
 ```sh
-yarn add react-popout-component
+yarn add react-portal-popout
 ```
 
 ## Usage
