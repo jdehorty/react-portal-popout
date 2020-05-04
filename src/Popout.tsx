@@ -63,7 +63,7 @@ function forEachStyleElement(
   }
 }
 
-export class Popout extends React.Component<PopoutProps> {
+export default class Popout extends React.Component<PopoutProps> {
   public styleElement?: HTMLStyleElement | null;
   public child?: Window | null;
   private id?: string;
@@ -133,7 +133,7 @@ export class Popout extends React.Component<PopoutProps> {
 
   private setupCleanupCallbacks(): void {
     // Close the popout if main window is closed.
-    window.addEventListener('unload', (e) => this.closeChildWindowIfOpened());
+    window.addEventListener('unload', () => this.closeChildWindowIfOpened());
 
     globalContext.set('onChildClose', (id: string) => {
       if (PopoutMap[id].props.onClose) {
@@ -203,7 +203,7 @@ export class Popout extends React.Component<PopoutProps> {
       container.id = id;
       child.document.body.appendChild(container);
     } else {
-      let childHtml = '<!DOCTYPE html><html><head>';
+      let childHtml = `<!DOCTYPE html><html lang='en'><head>\n<title>${this.props.title}</title>`;
       for (let i = window.document.styleSheets.length - 1; i >= 0; i--) {
         const styleSheet = window.document.styleSheets[i] as CSSStyleSheet;
         try {

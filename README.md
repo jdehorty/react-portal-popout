@@ -1,6 +1,6 @@
 # React Popout Component
-
-[![Build Status](https://travis-ci.org/Microsoft/react-popout-component.svg?branch=v1.0.0)](https://travis-ci.org/Microsoft/react-popout-component) [![npm](https://img.shields.io/npm/v/react-popout-component.svg)](https://www.npmjs.com/package/react-popout-component)
+## This is a fork of the react-popout-component. Microsoft did the 95% of the work, but their repo went stale in 2018.
+[![Build Status](https://api.travis-ci.org/ickerday/react-portal-popout.svg?branch=v1.9.0)](https://travis-ci.org/Microsoft/react-popout-component) [![npm](https://img.shields.io/npm/v/react-portal-popout.svg)](https://www.npmjs.com/package/react-portal-popout)
 
 This is a React component designed for React 16 with complete Typescript support.
 
@@ -25,8 +25,8 @@ yarn add react-popout-component
 ## Usage
 
 ```tsx
-import * as React from 'react';
-import {Popout} from 'react-popout-component';
+import React from 'react';
+import { Popout } from 'react-portal-popout';
 
 export default class App extends React.Component<any, any> {
     constructor(props: any) {
@@ -57,7 +57,7 @@ export default class App extends React.Component<any, any> {
 
 ## API
 
-PopOut Component has the following props:
+Popout Component has the following props:
 
 ```ts
 export interface PopoutProps {
@@ -73,7 +73,6 @@ export interface PopoutProps {
 ```
 
 The `options` prop is of the following type:
-
 ```ts
 export interface WindowFeaturesOptions {
     left: number;
@@ -96,11 +95,11 @@ This component works well for both modes of style loading:
 2. Manual insertRule() into a CSSStyleSheet
 
 For the second case with insertRule(), since there is nothing that can observe the insert event, a callback must be registered when a
-rule is inserted. For an example usage with the Microsoft [Office Fabric](https://github.com/officedev/office-ui-fabric-react), 
+rule is being inserted. For an example usage with the Microsoft [Office Fabric](https://github.com/officedev/office-ui-fabric-react), 
 set it up as a global like so:
 
 ```js
-import {insertPopoutStylesheetRule} from 'react-popout-component';
+import {insertPopoutStylesheetRule} from 'react-portal-popout';
 
 window.FabricConfig = {
     mergeStyles: {
@@ -111,14 +110,14 @@ window.FabricConfig = {
 
 ## Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+~~This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+the rights to use your contribution. For details, visit https://cla.microsoft.com.~~
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
+~~When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
 a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+provided by the bot. You will only need to do this once across all repos using our CLA.~~
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+~~This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.~~

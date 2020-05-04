@@ -5,7 +5,7 @@ const monitors: {
   [id: string]: any;
 } = {};
 
-const delay = 250;
+const delay = 250; // ms
 
 function stop(id: string): void {
   if (monitors[id]) {

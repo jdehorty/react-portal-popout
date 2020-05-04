@@ -1,6 +1,7 @@
 {
-  "name": "react-popout-component",
-  "version": "1.9.0",
+  "name": "react-portal-popout",
+  "private": false,
+  "version": "1.9.1",
   "description": "Idiomatic React 16 component for popouts, updated because Microsoft doesn't give a damn about maintaining it anymore.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,8 +10,18 @@
     "build": "tsc -p tsconfig.build.json",
     "watch": "tsc -w -p tsconfig.build.json"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "react-portal",
+    "react-popout",
+    "popout",
+    "browser",
+    "electron"
+  ],
+  "authors": [
+    "Microsoft",
+    "Ickerday <elitarform@gmail.com> (https://github.com/Ickerday)"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/eslint": "^6.8.0",
