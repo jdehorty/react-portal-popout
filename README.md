@@ -62,7 +62,8 @@ PopOut Component has the following props:
 ```ts
 export interface PopoutProps {
     hidden?: boolean;
-    name?: string;
+    name?: string;  // window.name
+    title?: string; // document.title
     onClose?: () => void;
     onBeforeUnload?: (evt: BeforeUnloadEvent) => string | null | undefined;
     children?: any;

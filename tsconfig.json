@@ -1,9 +1,17 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "jsx": "react",
-        "strict": true,
-        "noUnusedLocals": true
-    }
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "commonjs",
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }

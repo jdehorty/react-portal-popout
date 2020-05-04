@@ -1,33 +1,33 @@
-import { popouts } from './popouts';
 import * as globalContext from './globalContext';
+import PopoutMap from './popoutMap';
 
 const monitors: {
-    [id: string]: any;
+  [id: string]: any;
 } = {};
 
 const delay = 250;
 
-function start(id: string) {
-    const monitor = () => {
-        if (popouts[id] && popouts[id].props.onClose) {
-            if (!popouts[id].child || popouts[id].child!.closed) {
-                stop(id);
-                popouts[id].props.onClose!();
-                popouts[id].child = null;
-            } else {
-                monitors[id] = setTimeout(monitor, delay);
-            }
-        }
-    };
-
-    monitors[id] = setTimeout(monitor, delay);
+function stop(id: string): void {
+  if (monitors[id]) {
+    clearTimeout(monitors[id]);
+    delete monitors[id];
+  }
 }
 
-function stop(id: string) {
-    if (monitors[id]) {
-        clearTimeout(monitors[id]);
-        delete monitors[id];
+function start(id: string): void {
+  const monitor: () => void = () => {
+    if (PopoutMap[id] && PopoutMap[id].props.onClose) {
+      if (!PopoutMap[id].child || PopoutMap[id].child!.closed) {
+        stop(id);
+        PopoutMap[id].props.onClose!();
+        PopoutMap[id].child = null;
+      } else {
+        monitors[id] = setTimeout(monitor, delay);
+      }
     }
+  };
+
+  monitors[id] = setTimeout(monitor, delay);
 }
 
 globalContext.set('startMonitor', start);
