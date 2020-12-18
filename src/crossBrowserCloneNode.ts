@@ -1,5 +1,5 @@
 export default function crossBrowserCloneNode(element: HTMLElement, targetDocument: HTMLDocument): HTMLElement {
-  const cloned = targetDocument.createElement(element.tagName) as HTMLElement;
+  const cloned: HTMLElement = targetDocument.createElement(element.tagName) as HTMLElement;
   cloned.innerHTML = element.innerHTML;
 
   if (element.hasAttributes()) {

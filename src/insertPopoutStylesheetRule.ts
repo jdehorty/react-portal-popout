@@ -1,7 +1,7 @@
-import PopoutMap from './popoutMap';
+import PopoutMap from "./popoutMap";
 
 export default function insertPopoutStylesheetRule(rule: string) {
-  Object.keys(PopoutMap).forEach((popoutKey) => {
+  Object.keys(PopoutMap).forEach((popoutKey: string) => {
     const popout = PopoutMap[popoutKey];
     if (popout.child && popout.styleElement) {
       try {

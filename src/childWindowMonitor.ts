@@ -1,5 +1,5 @@
-import * as globalContext from './globalContext';
-import PopoutMap from './popoutMap';
+import * as globalContext from "./globalContext";
+import PopoutMap from "./popoutMap";
 
 const monitors: {
   [id: string]: any;
@@ -15,7 +15,7 @@ function stop(id: string): void {
 }
 
 function start(id: string): void {
-  const monitor: () => void = () => {
+  function monitor(): void {
     if (PopoutMap[id] && PopoutMap[id].props.onClose) {
       if (!PopoutMap[id].child || PopoutMap[id].child!.closed) {
         stop(id);
@@ -25,9 +25,9 @@ function start(id: string): void {
         monitors[id] = setTimeout(monitor, delay);
       }
     }
-  };
+  }
 
   monitors[id] = setTimeout(monitor, delay);
 }
 
-globalContext.set('startMonitor', start);
+globalContext.set("startMonitor", start);
