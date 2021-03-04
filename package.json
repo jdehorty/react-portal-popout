@@ -1,5 +1,5 @@
 {
-  "name": "react-portal-popout",
+  "name": "@justin.dehorty/react-portal-popout",
   "private": false,
   "version": "1.9.2",
   "description": "Idiomatic React 16 component for popouts, updated because Microsoft doesn't give a damn about maintaining it anymore.",
@@ -55,6 +55,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ickerday/react-portal-popout"
-  }
+    "url": "git+https://github.com/Ickerday/react-portal-popout.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ickerday/react-portal-popout/issues"
+  },
+  "homepage": "https://github.com/Ickerday/react-portal-popout#readme",
+  "directories": {
+    "test": "test"
+  },
+  "author": "Microsoft"
 }
