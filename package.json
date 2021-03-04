@@ -1,7 +1,7 @@
 {
-  "name": "@justin.dehorty/react-portal-popout",
+  "name": "@justin.dehorty/react-portal-popout2",
   "private": false,
-  "version": "1.9.2",
+  "version": "1.9.4",
   "description": "Idiomatic React 16 component for popouts, updated because Microsoft doesn't give a damn about maintaining it anymore.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
