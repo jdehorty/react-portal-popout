@@ -1,5 +1,5 @@
 {
-  "name": "better-react-portal",
+  "name": "@jdehorty/better-react-portal",
   "private": false,
   "version": "2.0.0",
   "description": "Idiomatic React 16 component for popouts, updated because Microsoft doesn't give a damn about maintaining it anymore.",
