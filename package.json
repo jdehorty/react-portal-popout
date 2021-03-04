@@ -1,5 +1,5 @@
 {
-  "name": "@justin.dehorty/react-portal-popout2",
+  "name": "react-typescript-portals",
   "private": false,
   "version": "1.9.4",
   "description": "Idiomatic React 16 component for popouts, updated because Microsoft doesn't give a damn about maintaining it anymore.",
